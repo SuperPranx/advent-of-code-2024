@@ -23,20 +23,17 @@ public class ConsolidateResearchLocationsInfoTest extends TestCase {
   }
 
   public void testSumOfDifferences() {
-    ConsolidateResearchLocationsInfo.DistancesInput input =
-        ConsolidateResearchLocationsInfo.extractListsFromInputFile("day01/input.txt");
-    Long result =
-        ConsolidateResearchLocationsInfo.calculateDistances(input.firstGroupLocations(), input.secondGroupLocations());
-    assertEquals(Long.valueOf(1151792L), result);
+    assertEquals(
+        Long.valueOf(1151792L), ConsolidateResearchLocationsInfo.calculateDistances(
+            ConsolidateResearchLocationsInfo.extractListsFromInputFile(
+                "day01/input.txt")));
   }
 
   public void testSimilarityCalculator() {
-    ConsolidateResearchLocationsInfo.DistancesInput input =
-        ConsolidateResearchLocationsInfo.extractListsFromInputFile("day01/input.txt");
-    Long result =
+    assertEquals(
+        Long.valueOf(21790168L),
         ConsolidateResearchLocationsInfo.calculateSimilarityScore(
-            input.firstGroupLocations(),
-            input.secondGroupLocations());
-    assertEquals(Long.valueOf(21790168L), result);
+            ConsolidateResearchLocationsInfo.extractListsFromInputFile(
+                "day01/input.txt")));
   }
 }

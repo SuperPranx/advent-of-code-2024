@@ -13,52 +13,49 @@ public class ConsolidateResearchLocationsInfo {
   private ConsolidateResearchLocationsInfo() {
   }
 
-  public static Long calculateSimilarityScore(List<Long> firstGroupLocations, List<Long> secondGroupLocations) {
-    if (firstGroupLocations.size() != secondGroupLocations.size()) {
+  public static Long calculateSimilarityScore(GroupLocations groupLocations) {
+    if (groupLocations.first.size() != groupLocations.second.size()) {
       throw new IllegalArgumentException("The two location lists must be of the same size");
     }
 
     Map<Long, Integer> numberOccurrences = new HashMap<>();
-    secondGroupLocations.forEach(number -> numberOccurrences.put(
+    groupLocations.second.forEach(number -> numberOccurrences.put(
         number,
         numberOccurrences.getOrDefault(number, 0) + 1));
 
-    return firstGroupLocations.stream()
+    return groupLocations.first.stream()
         .map(number -> number * numberOccurrences.getOrDefault(number, 0))
         .reduce(0L, Long::sum);
   }
 
-  public static Long calculateDistances(List<Long> firstGroupLocations, List<Long> secondGroupLocations) {
-    if (firstGroupLocations.size() != secondGroupLocations.size()) {
+  public static Long calculateDistances(GroupLocations groupLocations) {
+    if (groupLocations.first.size() != groupLocations.second.size()) {
       throw new IllegalArgumentException("The two location lists must be of the same size");
     }
 
-    Collections.sort(firstGroupLocations);
-    Collections.sort(secondGroupLocations);
-
     long differenceSum = 0L;
-    for (int i = 0; i < firstGroupLocations.size(); ++i) {
-      differenceSum += Math.abs(firstGroupLocations.get(i) - secondGroupLocations.get(i));
+    for (int i = 0; i < groupLocations.first.size(); ++i) {
+      differenceSum += Math.abs(groupLocations.first.get(i) - groupLocations.second.get(i));
     }
     return differenceSum;
   }
 
-  public static DistancesInput extractListsFromInputFile(String inputFilePath) {
-    List<Long> firstList = new ArrayList<>();
-    List<Long> secondList = new ArrayList<>();
+  public static GroupLocations extractListsFromInputFile(String inputFilePath) {
+    List<Long> firstGroupLocations = new ArrayList<>();
+    List<Long> secondGroupLocations = new ArrayList<>();
 
     FileReaderUtil.getListOfLines(inputFilePath).forEach(line -> {
       String[] numbers = line.split(" {3}");
-      firstList.add(Long.parseLong(numbers[0]));
-      secondList.add(Long.parseLong(numbers[1]));
+      firstGroupLocations.add(Long.parseLong(numbers[0]));
+      secondGroupLocations.add(Long.parseLong(numbers[1]));
     });
 
-    Collections.sort(firstList);
-    Collections.sort(secondList);
-    return new DistancesInput(firstList, secondList);
+    Collections.sort(firstGroupLocations);
+    Collections.sort(secondGroupLocations);
+    return new GroupLocations(firstGroupLocations, secondGroupLocations);
   }
 
-  public record DistancesInput(List<Long> firstGroupLocations, List<Long> secondGroupLocations) {
+  public record GroupLocations(List<Long> first, List<Long> second) {
 
   }
 }
