@@ -1,6 +1,5 @@
---- Day 01: Historian Hysteria ---
-
---- Part One ---
+# Day 01: Historian Hysteria
+## Part One
 
 You haven't even left yet and the group of Elvish Senior Historians has already hit a problem: their list of locations
 to check is currently empty. Eventually, someone decides that the best place to check first would be the Chief

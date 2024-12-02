@@ -1,6 +1,5 @@
---- Day 01: Historian Hysteria ---
-
---- Part Two ---
+# Day 01: Historian Hysteria
+## Part Two
 
 Your analysis only confirmed what everyone feared: the two lists of location IDs are indeed very different.
 

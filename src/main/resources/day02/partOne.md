@@ -1,6 +1,5 @@
---- Day 2: Red-Nosed Reports ---
-
---- Part One ---
+# Day 02: Red-Nosed Reports
+## Part One
 
 Fortunately, the first location The Historians want to search isn't a long walk from the Chief Historian's office.
 
@@ -43,3 +42,5 @@ In the example above, the reports can be found safe or unsafe by checking those 
 So, in this example, 2 reports are safe.
 
 Analyze the unusual data from the engineers. How many reports are safe?
+
+Your puzzle answer was 334.

@@ -1,3 +1,5 @@
+# Advent of Code 2024 
+
 The Chief Historian is always present for the big Christmas sleigh launch, but nobody has seen him in months! Last
 anyone heard, he was visiting locations that are historically significant to the North Pole; a group of Senior
 Historians has asked you to accompany them as they check the places they think he was most likely to visit.
@@ -12,3 +14,4 @@ puzzle is unlocked when you complete the first. Each puzzle grants one star. Goo
 The continuation of the story, as it progresses, can be found in the separate folders for each day:
 
     --- Day 01: Historian Hysteria ---
+    --- Day 02: Red-Nosed Reports ---
