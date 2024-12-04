@@ -6,15 +6,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 
-import org.superpranx.day01.ConsolidateResearchLocationsInfo;
-
 public class FileReaderUtil {
 
   private FileReaderUtil() {
   }
 
   public static List<String> getListOfLines(String filePath) {
-    try (InputStream inputStream = ConsolidateResearchLocationsInfo.class.getClassLoader()
+    try (InputStream inputStream = FileReaderUtil.class.getClassLoader()
         .getResourceAsStream(filePath)) {
       assert inputStream != null;
       BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
