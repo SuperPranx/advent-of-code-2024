@@ -24,3 +24,4 @@ target/
 **/src/main/resources/**/story.md
 **/src/main/resources/**/partOne.md
 **/src/main/resources/**/partTwo.md
+!**/src/main/resources/dayXY/**

@@ -1,12 +1,12 @@
-package org.superpranx.dayXY;
+package org.superpranx.day17;
 
 import java.util.List;
 
 import org.superpranx.util.FileReaderUtil;
 
-public class DayXYTask {
+public class Day17Task {
 
-  private DayXYTask() {
+  private Day17Task() {
   }
 
   public static int partOne(List<String> lines) {
