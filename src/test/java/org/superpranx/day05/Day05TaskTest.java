@@ -15,10 +15,16 @@ public class Day05TaskTest extends TestCase {
   }
 
   public void testPartOne() {
-    assertEquals(123, Day05Task.partOne(Day05Task.extractListsFromInputFile("day05/input.txt")));
+    assertEquals(4609,
+        Day05Task.partOne(
+            Day05Task.extractPositionData("day05/input01.txt"),
+            Day05Task.extractPageUpdates("day05/input02.txt")));
   }
 
   public void testPartTwo() {
-    assertEquals(456, Day05Task.partTwo(Day05Task.extractListsFromInputFile("day05/input.txt")));
+    assertEquals(5723,
+        Day05Task.partTwo(
+            Day05Task.extractPositionData("day05/input01.txt"),
+            Day05Task.extractPageUpdates("day05/input02.txt")));
   }
 }

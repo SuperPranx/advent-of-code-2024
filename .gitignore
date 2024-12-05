@@ -20,7 +20,7 @@ target/
 .DS_Store
 
 ## Advent of Code T&C compliance ##
-**/src/main/resources/**/input.txt
+**/src/main/resources/**/input*.txt
 **/src/main/resources/**/story.md
 **/src/main/resources/**/partOne.md
 **/src/main/resources/**/partTwo.md
