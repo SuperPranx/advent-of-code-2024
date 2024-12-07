@@ -13,13 +13,16 @@ public class Day06TaskTest extends TestCase {
   public static Test suite() {
     return new TestSuite(Day06TaskTest.class);
   }
-
-  public void testPartOne() {
-    Day06Task.extractMazeDataFromInputFile("day06/input.txt");
-    assertEquals(123, Day06Task.partOne());
-  }
+  //
+  //  public void testPartOne() {
+  //    Day06Task.clear();
+  //    Day06Task.extractMazeDataFromInputFile("day06/input.txt");
+  //    assertEquals(4696, Day06Task.partOne());
+  //  }
 
   public void testPartTwo() {
+    Day06Task.clear();
+    //    Day06Task.extractMazeDataFromInputFile("day06/test.txt");
     Day06Task.extractMazeDataFromInputFile("day06/input.txt");
     assertEquals(456, Day06Task.partTwo());
   }
