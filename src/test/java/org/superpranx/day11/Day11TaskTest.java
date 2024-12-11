@@ -14,11 +14,11 @@ public class Day11TaskTest extends TestCase {
     return new TestSuite(Day11TaskTest.class);
   }
 
-  public void testPartOne() {
-    assertEquals(123, Day11Task.partOne(Day11Task.extractListsFromInputFile("day11/input.txt")));
+  public void testPartOne25() {
+    assertEquals(123, Day11Task.partOne(Day11Task.extractListsFromInputFile("day11/input.txt"), 25));
   }
 
-  public void testPartTwo() {
-    assertEquals(456, Day11Task.partTwo(Day11Task.extractListsFromInputFile("day11/input.txt")));
+  public void testPartOne75() {
+    assertEquals(456, Day11Task.partOne(Day11Task.extractListsFromInputFile("day11/input.txt"), 50));
   }
 }
